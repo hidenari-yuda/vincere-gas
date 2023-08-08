@@ -18,8 +18,8 @@ Use the [code](https://github.com/hidenari-yuda/vincere-gas/blob/main/examples/a
 Use the [code](https://github.com/hidenari-yuda/vincere-gas/blob/main/examples/webhook/app.js).
 
 ### Expample with other language
--Python: here
+-Python: comming soon...
 
--Go: here
+-Go: comming soon...
 
--Language List: here
+-Language List: comming soon...
