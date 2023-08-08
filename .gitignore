@@ -14,12 +14,3 @@ tmp/
 
 .DS_Store
 
-# added
-.github/
-integration-tests/
-lint-config/
-lerna.json
-package.json
-*.code-workspace
-
-

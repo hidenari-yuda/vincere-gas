@@ -152,8 +152,9 @@ const createWebhook = () => {
   // set apiKey
   const apiKey = 'SET API KEY HERE'
 
-  // set API URL example: https://example.vincere.io/api/v2/candidate/1234
-  const apiUrl = 'SET API URL HERE'
+  // set API URL example: https://example.vincere.io/api/v2/webhooks
+  const apiSubDomain = 'SET API SUBDOMAIN HERE'
+  const apiUrl = `https://${apiSubDomain}.vincere.io/api/v2/webhooks`
 
   // webhook url that receive webhook data
   const webhookUrl = 'SET WEBHOOK URL HERE'
@@ -281,8 +282,10 @@ const updateWebhook = () => {
   // set apiKey
   const apiKey = 'SET API KEY HERE'
 
-  // set API URL example: https://example.vincere.io/api/v2/candidate/1234
-  const apiUrl = 'SET API URL HERE'
+  // set API URL example: https://example.vincere.io/api/v2/webhooks
+  const apiSubDomain = 'SET API SUBDOMAIN HERE'
+  const webhookId = 'SET WEBHOOK ID HERE'
+  const apiUrl = `https://${apiSubDomain}.vincere.io/api/v2/webhooks/${webhookId}`
 
   // webhook url that receive webhook data
   const webhookUrl = 'SET WEBHOOK URL HERE'
@@ -309,7 +312,7 @@ const updateWebhook = () => {
         'id-token': idToken,
         'x-api-key': apiKey,
       },
-      'method': 'get',
+      'method': 'put',
       'body': {
         'webhook_url': webhookUrl,
         'events': events
@@ -345,26 +348,10 @@ const deleteWebhook = () => {
   // set apiKey
   const apiKey = 'SET API KEY HERE'
 
-  // set API URL example: https://example.vincere.io/api/v2/candidate/1234
-  const apiUrl = 'SET API URL HERE'
-
-  // webhook url that receive webhook data
-  const webhookUrl = 'SET WEBHOOK URL HERE'
-
-  // events that you want to receive
-  // choose from "CANDIDATE" "COMPANY" "CONTACT" "PLACEMENT" "JOB" "APPLICATION"
-  const entityType = 'CANDIDATE';
-
-  // choose from 
-  // "CREATE" "UPDATE" "DELETE" "SHORTLISTED" "SENT"
-  // "FIRST_INTERVIEW" "SECOND_INTERVIEW" "OFFERED"
-  // "PLACEMENT_PERMANENT" "PLACEMENT_CONTRACT" "PLACEMENT_TEMP"
-  // "REJECT_SHORTLISTED_CANDIDATE" "REJECT_SENT_CANDIDATE" "REJECT_1ST_INTERVIEW_CANDIDATE" "REJECT_2ND_PLUS_INTERVIEW_CANDIDATE" "REJECT_OFFERED_CANDIDATE"
-  // "ROLLBACK_SHORTLISTED_CANDIDATE" "ROLLBACK_SENT_CANDIDATE" "ROLLBACK_1ST_INTERVIEW_CANDIDATE" "ROLLBACK_2ND_PLUS_INTERVIEW_CANDIDATE" "ROLLBACK_OFFERED_CANDIDATE"
-  // "ASSIGN_TO_SHIFT"
-  const actionType = 'CREATE';
-
-  const events = [entityType, actionType];
+  // set API URL example: https://example.vincere.io/api/v2/webhooks
+  const apiSubDomain = 'SET API SUBDOMAIN HERE'
+  const webhookId = 'SET WEBHOOK ID HERE'
+  const apiUrl = `https://${apiSubDomain}.vincere.io/api/v2/webhooks/${webhookId}`
 
   // send HTTP GET requests
   try {
@@ -373,11 +360,7 @@ const deleteWebhook = () => {
         'id-token': idToken,
         'x-api-key': apiKey,
       },
-      'method': 'get',
-      'body': {
-        'webhook_url': webhookUrl,
-        'events': events
-      }
+      'method': 'delete'
     })
     
     // get response text

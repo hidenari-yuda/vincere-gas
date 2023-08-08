@@ -154,7 +154,9 @@ const callAPI = () => {
 
   // set your api url and candidate id 
   // example: https://example.vincere.io/api/v2/candidate/1234
-  const apiUrl = 'SET API URL HERE'
+  const apiSubDomain = 'SET API SUBDOMAIN HERE'
+  const candidateId = 'SET CANDIDATE ID HERE'
+  const apiUrl = `https://${apiSubDomain}.vincere.io/api/v2/candidate/${candidateId}`
 
   // send HTTP GET requests
   try {
