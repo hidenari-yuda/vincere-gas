@@ -11,7 +11,7 @@ Visit the [documentation site](https://api.vincere.io/#tag/Introduction) for all
 
 This peoject is not affiliated with Vincere.
 
-### If you would like to authenticate With Vincere API
+### If you would like to authenticate with Vincere API
 Use the [code](https://github.com/hidenari-yuda/vincere-gas/blob/main/examples/auth/app.js).
 
 ### If you would like to use webhook with Vincere API
